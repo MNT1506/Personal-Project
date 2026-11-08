@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    width: fit-content;
+    margin: auto;
+}
+
+.info {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+.start-btn {
+    width: fit-content;
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+}
+
+.start-btnn:hover {background-color: #3e8e41} /* Darker green when hovered */
+
+.start-btnn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+.container {
+    width: 100vw;
+    height: 90vh;
+    background-color: #FDF8E6;
+    padding: 24px;
+}
+
+.card-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 24px; /* Increased gap from 18px for better breathing room */
+    width: 640px;
+    margin: 24px auto;
+    padding: 32px;
+    border-radius: 32px; /* Increased from 12px for softer edges */
+    background-color: #f8f8f8; /*[cite: 3] */
+    
+    /* Claymorphism shadow effect for the board */
+    box-shadow: 
+        12px 12px 24px rgba(0, 0, 0, 0.06), 
+        -12px -12px 24px rgba(255, 255, 255, 0.8),
+        inset 4px 4px 8px rgba(255, 255, 255, 0.5),
+        inset -4px -4px 8px rgba(0, 0, 0, 0.03);
+}
+
+.card {
+    width: 80px; /*[cite: 3] */
+    height: 80px; /*[cite: 3] */
+    background-color: cadetblue; /*[cite: 3] */
+    position: relative; /*[cite: 3] */
+    display: flex; /*[cite: 3] */
+    justify-content: center; /*[cite: 3] */
+    align-items: center; /*[cite: 3] */
+    border-radius: 18px; /* Softer, rounder corners for the clay look */
+    cursor: pointer; /*[cite: 3] */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05) translateY(-4px); /* Adds a slight lift effect */
+}
+
+.hidden-card {
+    position: absolute; /*[cite: 3] */
+    top: 0; /*[cite: 3] */
+    z-index: 10; /*[cite: 3] */
+    background-color: rgb(219, 159, 159); /*[cite: 3] */
+    width: 100%; /*[cite: 3] */
+    height: 100%; /*[cite: 3] */
+    border-radius: 18px; /* Must match the .card border-radius */
+    
+    /* Puffy Claymorphism effect for the cards */
+    box-shadow: 
+        6px 6px 12px rgba(0, 0, 0, 0.08), /* Soft outer dark shadow */
+        -6px -6px 12px rgba(255, 255, 255, 0.6), /* Soft outer light highlight */
+        inset 4px 4px 8px rgba(255, 255, 255, 0.5), /* Inner top highlight */
+        inset -4px -4px 8px rgba(0, 0, 0, 0.1); /* Inner bottom shadow */
+}
+.score-container {
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+
+}
